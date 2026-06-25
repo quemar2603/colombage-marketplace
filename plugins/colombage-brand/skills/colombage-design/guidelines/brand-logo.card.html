@@ -1,0 +1,35 @@
+<!-- @dsCard group="Brand" viewport="700x200" name="Logo & wordmark" subtitle="Mark + navy wordmark on light; official horizontal lockup on navy." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 0; background: var(--surface-card); }
+  .wrap { display: flex; height: 200px; }
+  .panel { flex: 1; display: flex; align-items: center; gap: 16px; padding: 0 30px; }
+  .light { background: var(--cream); }
+  .dark  { background: var(--navy-600); }
+  .mark { width: 72px; height: 72px; flex: none; object-fit: contain; }
+  .wm { display: flex; flex-direction: column; line-height: 1; }
+  .wm .name { font-size: 32px; letter-spacing: -0.01em; }
+  .wm .tag { font-size: 13px; letter-spacing: .04em; text-transform: uppercase; margin-top: 6px; }
+  .on-light .name { color: var(--navy-600); }
+  .on-light .tag  { color: var(--text-muted); }
+  .on-dark .name  { color: #fff; }
+  .on-dark .tag   { color: var(--peri-300); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel light">
+      <img class="mark" src="../assets/logo-mark-navy.svg" alt="ColombAge" />
+      <div class="wm on-light"><span class="name">ColombAge</span></div>
+    </div>
+    <div class="panel dark">
+      <img class="mark" src="../assets/logo-mark.svg" alt="ColombAge" />
+      <div class="wm on-dark"><span class="name">ColombAge</span></div>
+    </div>
+  </div>
+</body>
+</html>

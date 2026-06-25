@@ -1,0 +1,16 @@
+{
+  "name": "colombage-brand",
+  "version": "0.1.0",
+  "description": "Identité visuelle ColombAge : direction artistique (charte v2) et design system (couleurs, typo, UI kit) pour toute production visuelle — slides, web, flyers, emails, composants.",
+  "author": {
+    "name": "ColombAge"
+  },
+  "category": "design",
+  "keywords": [
+    "colombage",
+    "brand",
+    "design-system",
+    "charte-graphique",
+    "ui-kit"
+  ]
+}

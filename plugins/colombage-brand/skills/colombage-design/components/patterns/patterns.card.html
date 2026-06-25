@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" viewport="700x340" name="Patterns — service cards" subtitle="Composed home-care service tiles." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 26px; background: var(--surface-page); }
+  .stack { display: flex; flex-direction: column; gap: 16px; max-width: 460px; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { ServiceCard } = window.ColombAgeDesignSystem_008fae;
+    function I({ name }) {
+      const ref = React.useRef(null);
+      React.useEffect(() => { if (window.lucide) window.lucide.createIcons({ nameAttr: 'data-lucide', attrs: { width: 26, height: 26 } }); });
+      return <i ref={ref} data-lucide={name}></i>;
+    }
+    function Demo() {
+      const [sel, setSel] = React.useState('courses');
+      return (
+        <div className="stack">
+          <ServiceCard title="Aide aux courses" tone="pink" selected={sel==='courses'} onClick={() => setSel('courses')}
+            icon={<I name="shopping-basket" />} description="Un accompagnement chaque semaine pour vos achats." meta="Dès 22 € / visite" />
+          <ServiceCard title="Compagnie & lien social" tone="peri" selected={sel==='compagnie'} onClick={() => setSel('compagnie')}
+            icon={<I name="heart-handshake" />} description="Un moment partagé, une présence rassurante." meta="Dès 25 € / visite" />
+          <ServiceCard title="Visite de courtoisie" tone="navy" selected={sel==='visite'} onClick={() => setSel('visite')}
+            icon={<I name="home" />} description="Nous passons veiller sur ce qui compte." meta="Inclus dans l'abonnement" />
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+    setTimeout(() => window.lucide && window.lucide.createIcons({ nameAttr: 'data-lucide' }), 300);
+  </script>
+</body>
+</html>

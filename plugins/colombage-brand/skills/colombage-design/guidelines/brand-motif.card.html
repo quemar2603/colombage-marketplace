@@ -1,0 +1,30 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="Pink divider motif" subtitle="Soft pink chips & rules separate items — warm punctuation." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 26px 28px; background: var(--surface-card); color: var(--text-body); }
+  .stack { display: flex; flex-direction: column; gap: 16px; max-width: 600px; }
+  .item { display: flex; align-items: center; gap: 14px; font-size: 17px; }
+  .chip { width: 12px; height: 12px; border-radius: 999px; background: var(--pink-400); flex: none; }
+  .rule { height: 2px; background: var(--pink-300); border-radius: 999px; }
+  .tag { display:inline-flex; align-items:center; padding: 6px 14px; border-radius: 999px;
+         background: var(--pink-100); color: var(--navy-700); font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="stack">
+    <div class="item"><span class="chip"></span>Lundi · Visite de courtoisie</div>
+    <div class="rule"></div>
+    <div class="item"><span class="chip"></span>Mercredi · Aide aux courses</div>
+    <div class="rule"></div>
+    <div style="display:flex;gap:10px;margin-top:2px">
+      <span class="tag">Compagnie</span>
+      <span class="tag">Ménage</span>
+      <span class="tag">Repas</span>
+    </div>
+  </div>
+</body>
+</html>

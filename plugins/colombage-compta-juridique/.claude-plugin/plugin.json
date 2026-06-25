@@ -1,0 +1,18 @@
+{
+  "name": "colombage-compta-juridique",
+  "version": "0.1.0",
+  "description": "Boîte à outils compta/fiscale et juridique pour entreprises françaises : expert-comptable, commissaire aux comptes, contrôleur fiscal, notaire et syndic de copropriété. Mode compliance-first.",
+  "author": {
+    "name": "ColombAge"
+  },
+  "category": "finance",
+  "keywords": [
+    "comptabilite",
+    "fiscalite",
+    "juridique",
+    "notaire",
+    "syndic",
+    "audit",
+    "france"
+  ]
+}

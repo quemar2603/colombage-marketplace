@@ -1,0 +1,28 @@
+# --- Données réelles / confidentielles ColombAge (RGPD) ---
+# Ne JAMAIS versionner les données réelles d'entreprise/copro/seniors.
+# Seuls les fichiers *.example.json doivent être suivis.
+**/company.json
+**/copros.json
+**/*.real.json
+
+# --- Sorties générées ---
+**/output/
+**/out/
+*.pdf
+!plugins/agricidaniel-seo/pdf/**
+
+# --- Système / éditeurs ---
+desktop.ini
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- Node ---
+node_modules/

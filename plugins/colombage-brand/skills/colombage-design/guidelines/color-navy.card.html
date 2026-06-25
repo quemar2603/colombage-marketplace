@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Brand — Navy (primary)" subtitle="Deep, trustworthy navy. Core brand + primary actions." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-card); }
+  .row { display: flex; gap: 10px; }
+  .sw { flex: 1; border-radius: var(--radius-md); padding: 12px 10px; height: 96px;
+        display: flex; flex-direction: column; justify-content: flex-end;
+        font-size: 12px; border: 1px solid rgba(48,73,105,.08); }
+  .sw .name { font-weight: 400; }
+  .sw .hex { opacity: .8; }
+  .light { color: var(--navy-700); }
+  .dark  { color: #fff; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw light" style="background:var(--navy-100)"><span class="name">navy-100</span><span class="hex">#E2E7EF</span></div>
+    <div class="sw light" style="background:var(--navy-300)"><span class="name">navy-300</span><span class="hex">#8A9CB8</span></div>
+    <div class="sw dark" style="background:var(--navy-500)"><span class="name">navy-500</span><span class="hex">#3E5A80</span></div>
+    <div class="sw dark" style="background:var(--navy-600);outline:3px solid var(--peri-400);outline-offset:2px"><span class="name">navy-600 ★</span><span class="hex">#304969</span></div>
+    <div class="sw dark" style="background:var(--navy-800)"><span class="name">navy-800</span><span class="hex">#243954</span></div>
+  </div>
+</body>
+</html>

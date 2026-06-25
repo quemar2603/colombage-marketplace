@@ -1,0 +1,57 @@
+/* ============================================================
+   ColombAge — Spacing, radius, shadow tokens
+   Rounded, soft, airy. Big tap targets (>=48px) for older users.
+   ============================================================ */
+:root {
+  /* ---- Spacing scale (4px base) ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* ---- Radii — proportional to element size ----
+     Rule: radius scales with the element. Small controls get small radii,
+     large surfaces get large radii — so curvature reads as consistent
+     everywhere. For nested elements use concentric radii:
+     inner-radius = outer-radius − gap (the padding between them).
+     Size → radius guide:
+       chips / dots / avatars / toggles ........ pill (fully round)
+       inputs, buttons, small controls ......... md  (14px)
+       standard cards, list rows, tiles ........ lg  (20px)
+       large/feature panels, modals ............ xl  (28px)
+       hero blocks, CTA bands, phone screens ... 2xl (36px)            */
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  36px;
+  --radius-pill: 999px;
+
+  /* Semantic, size-proportional aliases */
+  --radius-control: var(--radius-md);   /* inputs & buttons (~48px tall) */
+  --radius-button: var(--radius-md);
+  --radius-card: var(--radius-lg);      /* standard cards & rows */
+  --radius-panel: var(--radius-xl);     /* large feature panels */
+  --radius-hero: var(--radius-2xl);     /* hero / CTA blocks */
+
+  /* ---- Tap targets ---- */
+  --tap-min:    48px;   /* minimum comfortable tap target */
+  --tap-large:  60px;   /* primary actions */
+
+  /* ---- Soft, warm shadows (no harsh black; navy-tinted) ---- */
+  --shadow-xs:  0 1px 2px rgba(48, 73, 105, 0.06);
+  --shadow-sm:  0 2px 8px rgba(48, 73, 105, 0.08);
+  --shadow-md:  0 6px 18px rgba(48, 73, 105, 0.10);
+  --shadow-lg:  0 14px 36px rgba(48, 73, 105, 0.14);
+  --shadow-accent: 0 8px 22px rgba(216, 138, 153, 0.28);
+
+  /* ---- Focus ring ---- */
+  --ring-width: 3px;
+}

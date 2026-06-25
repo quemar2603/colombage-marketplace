@@ -1,0 +1,5 @@
+/* ColombAge webfonts — Varela Round (rounded, friendly, highly legible) */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Varela Round only ships a single 400 weight. We lean on size, color and
+   letter-spacing for hierarchy rather than faux-bolding. */

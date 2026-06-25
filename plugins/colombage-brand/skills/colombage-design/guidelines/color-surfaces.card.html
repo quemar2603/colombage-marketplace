@@ -1,0 +1,34 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Surfaces & text" subtitle="Warm cream page, white cards, navy text roles." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 20px; background: var(--surface-card); }
+  .wrap { display: flex; gap: 14px; }
+  .surfaces { display: flex; gap: 10px; flex: 1; }
+  .sw { flex: 1; border-radius: var(--radius-md); padding: 10px; height: 110px;
+        display: flex; flex-direction: column; justify-content: flex-end;
+        font-size: 12px; color: var(--navy-700); border: 1px solid var(--border-soft); }
+  .text-roles { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px; padding-left: 6px; }
+  .text-roles span { font-size: 17px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="surfaces">
+      <div class="sw" style="background:var(--cream)">page<br><small style="opacity:.7">cream</small></div>
+      <div class="sw" style="background:var(--white)">card<br><small style="opacity:.7">white</small></div>
+      <div class="sw" style="background:var(--navy-50)">sunken<br><small style="opacity:.7">navy-50</small></div>
+      <div class="sw" style="background:var(--pink-100)">accent<br><small style="opacity:.7">pink-100</small></div>
+    </div>
+    <div class="text-roles">
+      <span style="color:var(--text-strong)">Strong heading text</span>
+      <span style="color:var(--text-body)">Body copy text</span>
+      <span style="color:var(--text-muted)">Muted / secondary</span>
+      <span style="color:var(--text-link)">Link text</span>
+    </div>
+  </div>
+</body>
+</html>

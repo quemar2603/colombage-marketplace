@@ -1,0 +1,73 @@
+<!-- @dsCard group="Components" viewport="700x460" name="Core — buttons, badges, cards, avatars" subtitle="Pill actions, soft chips, rounded surfaces." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 26px; background: var(--surface-page); }
+  .group { margin-bottom: 22px; }
+  .glab { font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+  .rowf { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { Button, Badge, Avatar, Card } = window.ColombAgeDesignSystem_008fae;
+    function Demo() {
+      return (
+        <div>
+          <div className="group">
+            <div className="glab">Buttons</div>
+            <div className="rowf">
+              <Button variant="primary">Réserver</Button>
+              <Button variant="accent">Nous appeler</Button>
+              <Button variant="secondary">Plus tard</Button>
+              <Button variant="outline">Détails</Button>
+              <Button variant="ghost">Annuler</Button>
+              <Button variant="primary" disabled>Indispo</Button>
+            </div>
+          </div>
+          <div className="group">
+            <div className="glab">Badges</div>
+            <div className="rowf">
+              <Badge tone="pink">Compagnie</Badge>
+              <Badge tone="peri">Ménage</Badge>
+              <Badge tone="navy">Premium</Badge>
+              <Badge tone="success" dot>Confirmé</Badge>
+              <Badge tone="warning" dot>En attente</Badge>
+            </div>
+          </div>
+          <div className="group">
+            <div className="glab">Avatars</div>
+            <div className="rowf">
+              <Avatar name="Marie Lefèvre" tone="pink" online />
+              <Avatar name="Jean Dubois" tone="peri" />
+              <Avatar name="Aide Vie" tone="navy" size={64} />
+            </div>
+          </div>
+          <div className="group">
+            <div className="glab">Cards</div>
+            <div className="rowf">
+              <Card tone="white" interactive style={{ width: 200 }}>
+                <h3 style={{ margin: '0 0 6px', fontSize: 20 }}>Aide aux courses</h3>
+                <p style={{ margin: 0, fontSize: 15, color: 'var(--text-muted)' }}>Chaque semaine, ensemble.</p>
+              </Card>
+              <Card tone="accent" style={{ width: 200 }}>
+                <h3 style={{ margin: '0 0 6px', fontSize: 20 }}>Compagnie</h3>
+                <p style={{ margin: 0, fontSize: 15 }}>Un moment partagé.</p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

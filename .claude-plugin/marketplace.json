@@ -1,0 +1,44 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "colombage-marketplace",
+  "owner": {
+    "name": "ColombAge"
+  },
+  "metadata": {
+    "description": "Marketplace de skills Claude Code pour l'équipe ColombAge : identité de marque, veille SAP, outils compta/juridiques, et SEO (plugin tiers MIT)."
+  },
+  "plugins": [
+    {
+      "name": "colombage-brand",
+      "source": "./plugins/colombage-brand",
+      "description": "Identité visuelle ColombAge : direction artistique (charte v2) et design system (couleurs, typo, UI kit).",
+      "author": { "name": "ColombAge" },
+      "category": "design"
+    },
+    {
+      "name": "colombage-veille",
+      "source": "./plugins/colombage-veille",
+      "description": "Veille concurrentielle + réglementaire SAP via 4 sous-agents spécialisés.",
+      "author": { "name": "ColombAge" },
+      "category": "marketing"
+    },
+    {
+      "name": "colombage-compta-juridique",
+      "source": "./plugins/colombage-compta-juridique",
+      "description": "Outils compta/fiscale et juridiques français : comptable, CAC, contrôleur fiscal, notaire, syndic.",
+      "author": { "name": "ColombAge" },
+      "category": "finance"
+    },
+    {
+      "name": "claude-seo",
+      "source": "./plugins/agricidaniel-seo",
+      "description": "Analyse SEO complète (25 skills + 18 agents) : technique, E-E-A-T, schema, GEO, local, clustering sémantique, e-commerce, international. Plugin tiers MIT par AgriciDaniel.",
+      "author": {
+        "name": "AgriciDaniel",
+        "email": "agricidaniel@gmail.com",
+        "url": "https://github.com/AgriciDaniel"
+      },
+      "category": "marketing"
+    }
+  ]
+}

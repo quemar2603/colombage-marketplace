@@ -1,0 +1,16 @@
+{
+  "name": "colombage-veille",
+  "version": "0.1.0",
+  "description": "Veille ColombAge (concurrence + réglementaire SAP) via 4 sous-agents spécialisés : marché, coût du travail, reste à charge, signaux/opportunités.",
+  "author": {
+    "name": "ColombAge"
+  },
+  "category": "marketing",
+  "keywords": [
+    "colombage",
+    "veille",
+    "sap",
+    "concurrence",
+    "reglementaire"
+  ]
+}

@@ -1,0 +1,45 @@
+/* ============================================================
+   ColombAge — base element styling & helpers
+   ============================================================ */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+  margin: 0 0 0.4em;
+  font-weight: 400;
+}
+
+p { margin: 0 0 1em; text-wrap: pretty; }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Eyebrow / label utility */
+.ca-eyebrow {
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Accessible focus ring used across components */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: var(--ring-width) solid var(--focus-ring);
+  outline-offset: 2px;
+}

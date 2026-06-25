@@ -1,0 +1,35 @@
+/* ============================================================
+   ColombAge — Typography tokens
+   Single family (Varela Round). Larger-than-typical base sizes
+   for readability by older adults. Generous line-height.
+   ============================================================ */
+:root {
+  --font-base: 'Varela Round', ui-rounded, 'Hiragino Maru Gothic ProN',
+               'Segoe UI', system-ui, sans-serif;
+  --font-display: var(--font-base);
+
+  /* Type scale — comfortable, accessible. Base body is 18px. */
+  --text-xs:   13px;
+  --text-sm:   15px;
+  --text-base: 18px;   /* default body */
+  --text-md:   20px;
+  --text-lg:   24px;
+  --text-xl:   30px;
+  --text-2xl:  38px;
+  --text-3xl:  48px;
+  --text-4xl:  60px;
+
+  /* Line heights */
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;   /* body copy for readability */
+
+  /* Letter spacing — Varela Round is round & wide; tighten display a touch */
+  --tracking-display: -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.04em;   /* eyebrows / labels (uppercase) */
+
+  /* Semantic roles */
+  --font-weight-normal: 400;   /* Varela Round only has 400 */
+}

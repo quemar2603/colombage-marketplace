@@ -1,0 +1,75 @@
+/* ============================================================
+   ColombAge — Color tokens
+   Brand: warm, reassuring care-at-home for older adults.
+   Core: deep navy + white. Accents: soft pink + periwinkle blue.
+   No glassmorphism, no harsh contrast — gentle and trustworthy.
+   ============================================================ */
+:root {
+  /* ---- Brand primitives ---- */
+  --navy-900: #1d2e44;
+  --navy-800: #243954;
+  --navy-700: #2a4058;
+  --navy-600: #304969;            /* PRIMARY brand navy */
+  --navy-500: #3e5a80;
+  --navy-400: #5c769b;
+  --navy-300: #8a9cb8;
+  --navy-200: #b9c4d6;
+  --navy-100: #e2e7ef;
+  --navy-50:  #f2f5f9;
+
+  --pink-600: #d98a99;
+  --pink-500: #e3a0ad;
+  --pink-400: #eebbc3;            /* ACCENT soft pink */
+  --pink-300: #f3cdd3;
+  --pink-200: #f8dfe3;
+  --pink-100: #fceff1;
+
+  --peri-600: #8f9dce;
+  --peri-500: #a3afda;
+  --peri-400: #b8c1ec;            /* SECONDARY periwinkle */
+  --peri-300: #ccd3f1;
+  --peri-200: #e0e4f7;
+  --peri-100: #f0f2fb;
+
+  --white:    #ffffff;
+  --cream:    #fbfaf8;           /* warm off-white page base */
+
+  /* ---- Semantic surfaces ---- */
+  --surface-page:    var(--cream);
+  --surface-card:    var(--white);
+  --surface-sunken:  var(--navy-50);
+  --surface-inverse: var(--navy-600);
+  --surface-accent:  var(--pink-100);
+  --surface-info:    var(--peri-100);
+
+  /* ---- Semantic text ---- */
+  --text-strong:   var(--navy-900);
+  --text-body:     var(--navy-700);
+  --text-muted:    var(--navy-400);
+  --text-on-dark:  var(--white);
+  --text-on-accent: var(--navy-700);
+  --text-link:     var(--navy-600);
+
+  /* ---- Borders & dividers ---- */
+  --border-soft:   var(--navy-100);
+  --border-strong: var(--navy-200);
+  --border-accent: var(--pink-300);
+  --divider:       var(--peri-200);
+
+  /* ---- Interactive (primary action = navy) ---- */
+  --action:          var(--navy-600);
+  --action-hover:    var(--navy-700);
+  --action-press:    var(--navy-800);
+  --action-text:     var(--white);
+
+  /* ---- Focus ---- */
+  --focus-ring: var(--peri-400);
+
+  /* ---- Status (kept gentle, on-brand) ---- */
+  --success:       #4e8d6e;
+  --success-soft:  #e3f0ea;
+  --warning:       #c98a3c;
+  --warning-soft:  #f8ecda;
+  --danger:        #c2596a;
+  --danger-soft:   #f7e3e6;
+}

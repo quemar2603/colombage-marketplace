@@ -1,0 +1,44 @@
+<!-- @dsCard group="Spacing" viewport="700x260" name="Corner radii — proportional" subtitle="Radius scales with element size; nested = inner = outer − gap." -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { margin: 0; padding: 24px; background: var(--surface-card); color: var(--text-body); }
+  .wrap { display: flex; gap: 30px; align-items: flex-start; }
+  .scale { display: flex; gap: 18px; align-items: flex-end; }
+  .col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { background: var(--peri-200); border: 1.5px solid var(--peri-400); }
+  .lab { font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.3; }
+  .lab b { color: var(--text-body); font-weight: 400; }
+  .divider { width: 1px; align-self: stretch; background: var(--divider); }
+  /* concentric demo */
+  .nest { background: var(--navy-600); border-radius: var(--radius-panel); padding: 14px; }
+  .nest .inner { background: var(--pink-200); border-radius: calc(var(--radius-panel) - 14px); height: 78px; width: 150px; display: flex; align-items: center; justify-content: center; color: var(--navy-700); font-size: 13px; text-align: center; padding: 0 10px; }
+  .ttl { font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <div class="ttl">Bigger element → bigger radius</div>
+      <div class="scale">
+        <div class="col"><div class="box" style="width:46px;height:36px;border-radius:var(--radius-sm)"></div><div class="lab"><b>sm</b> 8<br>small</div></div>
+        <div class="col"><div class="box" style="width:64px;height:46px;border-radius:var(--radius-control)"></div><div class="lab"><b>control</b> 14<br>input/btn</div></div>
+        <div class="col"><div class="box" style="width:86px;height:62px;border-radius:var(--radius-card)"></div><div class="lab"><b>card</b> 20<br>cards/rows</div></div>
+        <div class="col"><div class="box" style="width:108px;height:80px;border-radius:var(--radius-panel)"></div><div class="lab"><b>panel</b> 28<br>panels</div></div>
+        <div class="col"><div class="box" style="width:130px;height:98px;border-radius:var(--radius-hero)"></div><div class="lab"><b>hero</b> 36<br>CTA/hero</div></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div>
+      <div class="ttl">Concentric nesting</div>
+      <div class="nest">
+        <div class="inner">inner = outer − gap</div>
+      </div>
+      <div class="lab" style="margin-top:10px;max-width:178px">Nested radius follows the padding so curves stay parallel.</div>
+    </div>
+  </div>
+</body>
+</html>
