@@ -1,0 +1,18 @@
+{
+  "name": "colombage-fiche-client",
+  "version": "0.1.0",
+  "description": "Recherche approfondie sur un senior ou une auxiliaire de vie ColombAge : orchestration multi-sources (Airtable, Gmail, Aircall) et fiche de synthèse structurée.",
+  "author": {
+    "name": "ColombAge"
+  },
+  "category": "productivity",
+  "keywords": [
+    "colombage",
+    "fiche-client",
+    "senior",
+    "auxiliaire",
+    "airtable",
+    "gmail",
+    "aircall"
+  ]
+}

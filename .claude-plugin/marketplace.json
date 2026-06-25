@@ -39,6 +39,20 @@
         "url": "https://github.com/AgriciDaniel"
       },
       "category": "marketing"
+    },
+    {
+      "name": "colombage-fiche-client",
+      "source": "./plugins/colombage-fiche-client",
+      "description": "Recherche approfondie sur un senior ou une auxiliaire de vie : orchestration multi-sources (Airtable, Gmail, Aircall) et fiche de synthèse structurée.",
+      "author": { "name": "ColombAge" },
+      "category": "productivity"
+    },
+    {
+      "name": "humanizer",
+      "source": "./plugins/humanizer",
+      "description": "Supprime les marqueurs d'écriture générée par IA pour rendre un texte plus naturel et humain (guide Wikipedia « Signs of AI writing »). Plugin tiers MIT.",
+      "author": { "name": "Humanizer (Wikipedia AI Cleanup)" },
+      "category": "writing"
     }
   ]
 }

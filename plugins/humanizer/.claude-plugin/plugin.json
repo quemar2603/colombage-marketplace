@@ -1,0 +1,16 @@
+{
+  "name": "humanizer",
+  "version": "2.8.0",
+  "description": "Supprime les marqueurs d'écriture générée par IA pour rendre un texte plus naturel et humain. Basé sur le guide Wikipedia « Signs of AI writing ». Plugin tiers MIT.",
+  "author": {
+    "name": "Humanizer (Wikipedia AI Cleanup)"
+  },
+  "category": "writing",
+  "keywords": [
+    "humanizer",
+    "writing",
+    "editing",
+    "ai-detection",
+    "redaction"
+  ]
+}
