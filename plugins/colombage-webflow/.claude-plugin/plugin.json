@@ -1,7 +1,7 @@
 {
   "name": "colombage-webflow",
-  "version": "0.2.0",
-  "description": "Création et modification d'articles dans le CMS Webflow ColombAge (sites principal + Compagnie SAP) : mise en forme, règles SEO + style, snippets HTML, liens, et push en draft via API ou MCP Webflow.",
+  "version": "0.3.0",
+  "description": "Création, rédaction guidée par la SERP et modification d'articles dans le CMS Webflow ColombAge (sites principal + Compagnie SAP) : recherche concurrentielle via sous-agent, mise en forme, règles SEO + style, snippets HTML, liens, et push en draft via API ou MCP Webflow.",
   "author": {
     "name": "ColombAge"
   },

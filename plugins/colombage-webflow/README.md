@@ -4,6 +4,20 @@ Plugin Claude Code pour **créer et modifier des articles dans le CMS Webflow Co
 
 Le skill `webflow-article` : mise en forme Markdown → HTML, snippets HTML embed (CTA, encadré « LIRE AUSSI », tableau `gir-table`), mapping des champs par collection, règles SEO + style, liens (sources juridiques + maillage interne), et publication **en brouillon** via l'API Webflow ou le MCP.
 
+## Rédaction guidée par la SERP (sous-agent `webflow-redacteur`)
+
+Quand on veut **créer un article sans fournir le texte** (« rédige un article sur X »), le skill délègue
+à un sous-agent **`webflow-redacteur`** (modèle Opus, contexte isolé) qui :
+
+1. **recherche la SERP** (s'appuie sur `claude-seo:seo-content-brief` s'il est installé, sinon
+   WebSearch/WebFetch des premiers résultats) et renvoie un **brief** (outline, angle, gaps, méta-tags,
+   FAQ, liens internes, sources à lier) ;
+2. après **validation humaine du brief**, **rédige l'article** et renvoie le JSON d'entrée de
+   `prepare_article.py`.
+
+Le skill enchaîne ensuite le pipeline standard (prepare → résolution des références → push **en
+brouillon**). Sujet YMYL : aucun chiffre/montant/base légale inventé, sources officielles liées.
+
 ## Configuration des tokens Webflow
 
 Deux façons d'autoriser l'écriture dans le CMS. **Choisis-en une.**
