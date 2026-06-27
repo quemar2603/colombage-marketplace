@@ -22,6 +22,7 @@ Puis redémarrer Claude Code si besoin.
 | **colombage-veille** | `veille` + 4 agents (marché, coût du travail, reste à charge, signaux) | Croissance / veille SAP |
 | **colombage-compta-juridique** | `comptable`, `commissaire-aux-comptes`, `controleur-fiscal`, `notaire`, `syndic` | Gestion, compta, juridique |
 | **claude-seo** | 25 skills + 18 agents SEO (technique, E-E-A-T, schema, GEO, local…) | SEO / marketing |
+| **crawl4ai** | `crawl4ai` (web crawling & extraction de données : scraping, pages JS, multi-URL, pipelines) | Data / dev / veille |
 
 ### Exemples
 
