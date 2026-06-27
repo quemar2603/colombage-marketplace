@@ -28,6 +28,9 @@ import json
 import urllib.request
 import urllib.error
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from webflow_auth import get_token  # noqa: E402
+
 API_BASE = "https://api.webflow.com/v2"
 
 
@@ -59,13 +62,12 @@ def _emit(obj):
 
 
 def main():
-    token = os.environ.get("WEBFLOW_API_TOKEN")
-    if not token:
-        raise SystemExit("[webflow_get] WEBFLOW_API_TOKEN absente.")
     args = sys.argv[1:]
     if not args:
-        raise SystemExit("[webflow_get] Usage : python webflow_get.py <collection_id> [--id ID | --slug SLUG | --list] [--field SLUG]")
+        raise SystemExit("[webflow_get] Usage : python webflow_get.py <collection_id> [--id ID | --slug SLUG | --list] [--field SLUG] [--site compagnie|principal]")
     collection_id = args[0]
+    site = args[args.index("--site") + 1] if "--site" in args else None
+    token = get_token(collection_id=collection_id, site=site)
     field = None
     if "--field" in args:
         field = args[args.index("--field") + 1]

@@ -5,6 +5,15 @@
 **/copros.json
 **/*.real.json
 
+# --- Secrets / tokens (NE JAMAIS versionner) ---
+# Tokens API Webflow et autres secrets : fichiers locaux uniquement.
+# Seuls les *.example.json (sans valeur réelle) sont suivis.
+**/webflow_tokens.json
+**/*.secret.json
+**/.env
+**/.env.*
+!**/.env.example
+
 # --- Sorties générées ---
 **/output/
 **/out/

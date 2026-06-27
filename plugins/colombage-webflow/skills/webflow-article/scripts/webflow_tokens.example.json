@@ -1,0 +1,7 @@
+{
+  "_comment": "MODELE. Copiez ce fichier en 'webflow_tokens.json' (ignore par Git) dans le meme dossier, puis renseignez vos tokens API Webflow. Ce fichier-ci (.example) ne contient AUCUN secret et reste suivi par Git. Le fichier 'webflow_tokens.json' rempli ne doit JAMAIS etre commite (il est gitignore).",
+  "_how_to": "Generer un token : Webflow > Site settings du site concerne > Apps & integrations > API access > Generate API token, en cochant les scopes 'cms:read' + 'cms:write'. Un token est propre a UN site.",
+  "_securite": "Ne partagez les tokens qu'en canal securise (gestionnaire de secrets), jamais par chat ni par Git. En cas de fuite, revoquez et regenerez.",
+  "compagnie": "REMPLACER_PAR_LE_TOKEN_DU_SITE_COMPAGNIE_SAP",
+  "principal": "REMPLACER_PAR_LE_TOKEN_DU_SITE_PRINCIPAL"
+}

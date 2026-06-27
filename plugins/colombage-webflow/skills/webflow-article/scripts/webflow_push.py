@@ -32,6 +32,9 @@ import json
 import urllib.request
 import urllib.error
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from webflow_auth import get_token  # noqa: E402
+
 API_BASE = "https://api.webflow.com/v2"
 
 
@@ -50,9 +53,6 @@ def _request(method, url, token, payload=None):
 
 
 def main():
-    token = os.environ.get("WEBFLOW_API_TOKEN")
-    if not token:
-        raise SystemExit("[webflow_push] Variable d'environnement WEBFLOW_API_TOKEN absente.")
     if len(sys.argv) < 2:
         raise SystemExit("[webflow_push] Usage : python webflow_push.py <request.json>")
 
@@ -62,6 +62,10 @@ def main():
     collection_id = body.get("collection_id")
     if not collection_id:
         raise SystemExit("[webflow_push] 'collection_id' obligatoire dans le payload.")
+
+    # Token resolu automatiquement (env par site / env globale / fichier local gitignore).
+    # 'site' optionnel dans le payload ("compagnie"/"principal") sinon deduit du collection_id.
+    token = get_token(collection_id=collection_id, site=body.get("site"))
     item_id = body.get("item_id")
     is_draft = body.get("isDraft", True)
     field_data = body.get("fieldData")

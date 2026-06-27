@@ -105,13 +105,13 @@ Remplace dans `fieldData` la valeur slug par l'**ID** de l'item trouvé. Si le s
 Deux voies. **Préférer le script API dès que le rich text est volumineux** (un article complet avec tableaux/snippets fait > 10 Ko, et le recopier dans un appel MCP est lent et faillible).
 
 **Voie A — Script API `webflow_push.py` (recommandée pour les articles complets)**
-Nécessite la variable d'environnement `WEBFLOW_API_TOKEN` (token du site, scopes `cms:read` + `cms:write`). Le script lit le payload depuis un fichier et l'envoie directement — aucune recopie.
+Le token est **résolu automatiquement** par `scripts/webflow_auth.py` : variable d'env `WEBFLOW_API_TOKEN_COMPAGNIE` / `WEBFLOW_API_TOKEN_PRINCIPAL`, sinon `WEBFLOW_API_TOKEN`, sinon le fichier local **`scripts/webflow_tokens.json`** (gitignoré ; copie de `webflow_tokens.example.json`). Le bon token est choisi selon le site (déduit du `collection_id`). Scopes requis : `cms:read` + `cms:write`. Le script lit le payload depuis un fichier et l'envoie directement — aucune recopie.
 
 ```bash
 # request.json = { "collection_id": "...", "item_id": "...(optionnel: présent => update)", "isDraft": true, "fieldData": {...refs résolues...} }
-WEBFLOW_API_TOKEN=xxxxx python scripts/webflow_push.py request.json
+python scripts/webflow_push.py request.json
 ```
-Sans `item_id` → création ; avec `item_id` → mise à jour. Toujours `isDraft: true`.
+Sans `item_id` → création ; avec `item_id` → mise à jour. Toujours `isDraft: true`. Configuration des tokens : voir le **README** du plugin. **Ne jamais committer `webflow_tokens.json`.**
 
 **Voie B — MCP `data_cms_tool` (pour un petit contenu / sans token)**
 ```
