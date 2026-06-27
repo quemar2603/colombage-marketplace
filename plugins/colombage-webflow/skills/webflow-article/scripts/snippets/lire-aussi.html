@@ -1,0 +1,38 @@
+<div class='encadre-lireaussi'>
+  <span class='lireaussi-label'>LIRE AUSSI :</span>
+  <a href='${lien}' class='lireaussi-link' target='${target:_self}' rel='noopener'>
+    ${texte}
+  </a>
+</div>
+
+<style>
+.encadre-lireaussi {
+  --accent-color: #4b6385; /* Couleur modifiée pour le rectangle à gauche */
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 12px;
+  margin: 32px 0 32px 0;
+  font-family: 'Varela Round', Arial, sans-serif;
+  background: transparent;
+}
+.lireaussi-label {
+  font-weight: bold;
+  font-size: 1.07rem;
+  margin-right: 5px;
+}
+.lireaussi-link {
+  font-size: 1.05rem;
+  color: #2196f3;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.15s;
+  word-break: break-word;
+}
+.lireaussi-link:hover,
+.lireaussi-link:focus {
+  color: #1761ac;
+  text-decoration: underline;
+}
+</style>

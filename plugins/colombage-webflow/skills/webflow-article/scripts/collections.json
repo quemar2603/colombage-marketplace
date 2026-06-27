@@ -1,0 +1,46 @@
+{
+  "_comment": "Carte des collections editoriales Webflow ColombAge. Synchronise 2026-06-26 via MCP Webflow. Re-verifier avec get_collection_list avant usage critique. champ_auteur indique le slug exact (auteur vs auteurs) qui varie selon la collection.",
+  "sites": {
+    "principal": {
+      "site_id": "634f2c8fdcab3b71c7e6d9a2",
+      "domaine": "colombage-cohabitation.fr",
+      "theme_collection_id": "6361382fe7421360b23e6789",
+      "cta_collection_id": "67f69dbcc74e60bcd0dcde63",
+      "auteurs_collection_id": null
+    },
+    "compagnie": {
+      "site_id": "673c735dd9635521f6a114fc",
+      "domaine": "sap.colombage-cohabitation.fr",
+      "theme_collection_id": "673c735dd9635521f6a11522",
+      "cta_collection_id": "680116916ea6feaf3a5d0064",
+      "auteurs_collection_id": "69b980444b31a10ebc12ccec"
+    }
+  },
+  "collections": {
+    "bonnes-idees":        { "site": "principal", "collection_id": "6660648d4b3cbc5310663409", "modele": "simple", "nb_faq": 2, "champ_auteur": null },
+    "maintien-domicile":   { "site": "principal", "collection_id": "66602b8091235474a196e178", "modele": "simple", "nb_faq": 2, "champ_auteur": null },
+    "equipement-technologie": { "site": "principal", "collection_id": "666056e9313d00e5a2e805f6", "modele": "simple", "nb_faq": 2, "champ_auteur": null },
+    "logement-specialise": { "site": "principal", "collection_id": "6660626ce45d98279d2b5111", "modele": "riche", "nb_faq": 2, "champ_auteur": null },
+    "jeune":               { "site": "principal", "collection_id": "68f0c1e45e2a5729736083c2", "modele": "simple", "nb_faq": 2, "champ_auteur": null },
+    "senior":              { "site": "principal", "collection_id": "68f0c9bde24651cabed5af4d", "modele": "simple", "nb_faq": 2, "champ_auteur": null },
+
+    "nos-conseils":        { "site": "compagnie", "collection_id": "673c735dd9635521f6a11664", "modele": "riche", "nb_faq": 4, "champ_auteur": "auteur",  "champ_rubrique": "nos-conseils" },
+    "tarifs-et-aides-financieres": { "site": "compagnie", "collection_id": "673c735dd9635521f6a11668", "modele": "riche", "nb_faq": 4, "champ_auteur": "auteurs", "sans_table_matieres": true },
+    "service-a-la-personne": { "site": "compagnie", "collection_id": "673ef91406976030b35d1f22", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs" },
+    "logements-specialises": { "site": "compagnie", "collection_id": "6821a752dc62a139b31a73c3", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs" },
+    "aide-menagere":       { "site": "compagnie", "collection_id": "68efcb3c199110f8eb8e5759", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs" },
+    "aide-a-la-toilette":  { "site": "compagnie", "collection_id": "68f89839eeb92eac22123b95", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs", "champ_resume": "resume-article" },
+    "aide-au-lever-et-au-coucher": { "site": "compagnie", "collection_id": "68f89856d106d0ecaa33cbe0", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs" },
+    "garde-de-nuit":       { "site": "compagnie", "collection_id": "68f8986beeb92eac221248d4", "modele": "riche", "nb_faq": 2, "champ_auteur": "auteurs", "champ_resume": "resume-article" },
+    "mandataire":          { "site": "compagnie", "collection_id": "6a34000ab48d6133c9d02244", "modele": "riche", "nb_faq": 4, "champ_auteur": "auteur",  "champ_rubrique": "nos-conseils" },
+    "auxiliaire-de-vie":   { "site": "compagnie", "collection_id": "6a3bd69407e84a92cfe1c298", "modele": "riche", "nb_faq": 4, "champ_auteur": "auteur",  "champ_rubrique": "nos-conseils" }
+  },
+  "modeles": {
+    "simple": {
+      "champs": ["name", "slug", "h1", "metadescription", "categorie", "chapo", "image-chapo", "alt-image-chapo", "premier-rich-text", "cta-colombage", "cta", "faq-question-1", "faq-reponse-1", "faq-question-2", "faq-reponse-2"]
+    },
+    "riche": {
+      "champs": ["name", "slug", "h1", "metadescription", "categorie", "chapo", "image-chapo", "alt-image-chapo", "table-des-matieres", "premier-rich-text", "1-er-lien-cta", "texte-premier-cta", "2-e-lien-cta", "deuxieme-rich-text", "activiter-faq", "faq-question-1", "faq-reponse-1", "faq-question-2", "faq-reponse-2", "faq-question-3", "faq-reponse-3", "faq-question-4", "faq-reponse-4", "cta-colombage", "apparition-dans-nos-conseils", "cta"]
+    }
+  }
+}

@@ -53,6 +53,20 @@
       "description": "Supprime les marqueurs d'écriture générée par IA pour rendre un texte plus naturel et humain (guide Wikipedia « Signs of AI writing »). Plugin tiers MIT.",
       "author": { "name": "Humanizer (Wikipedia AI Cleanup)" },
       "category": "writing"
+    },
+    {
+      "name": "crawl4ai",
+      "source": "./plugins/crawl4ai",
+      "description": "Boîte à outils de web crawling et d'extraction de données avec Crawl4AI : scraping, extraction structurée, pages JavaScript, crawl multi-URL et pipelines automatisés. Plugin tiers.",
+      "author": { "name": "Crawl4AI" },
+      "category": "productivity"
+    },
+    {
+      "name": "colombage-webflow",
+      "source": "./plugins/colombage-webflow",
+      "description": "Création et modification d'articles dans le CMS Webflow ColombAge (sites principal + Compagnie SAP) : mise en forme, règles SEO + style, snippets HTML, liens, et push en draft via API ou MCP Webflow.",
+      "author": { "name": "ColombAge" },
+      "category": "marketing"
     }
   ]
 }

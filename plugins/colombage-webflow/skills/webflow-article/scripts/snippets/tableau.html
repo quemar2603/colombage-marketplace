@@ -1,0 +1,99 @@
+<style>
+  /* —— Thème "tableau bleu pâle" ColombAge ——
+     (visuel doux, lignes alternées, 1re ligne bleu foncé).
+     Injecté automatiquement par prepare_article.py dès qu'un tableau Markdown
+     est présent dans un champ. Classe appliquée : .gir-table */
+  .gir-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border: 1px solid #d6e2ff;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  /* En-tête bleu foncé */
+  .gir-table thead th {
+    background: #304969; /* bleu ColombAge */
+    color: #fff;
+    font-weight: 800;
+    text-align: center;
+    padding: 14px 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .gir-table thead th:last-child {
+    border-right: none;
+  }
+
+  /* Lignes du tableau */
+  .gir-table tbody tr:nth-child(odd) td {
+    background: #f5f8ff; /* bleu très pâle */
+  }
+
+  .gir-table tbody tr:nth-child(even) td {
+    background: #eaf0ff; /* légèrement plus prononcé */
+  }
+
+  .gir-table tbody td {
+    padding: 16px 14px;
+    border-right: 1px solid #dfe8ff;
+    border-bottom: 1px solid #dfe8ff;
+    text-align: center;
+    color: #3a4656;
+  }
+
+  .gir-table tbody td:last-child {
+    border-right: none;
+  }
+  .gir-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* Première colonne légèrement accentuée */
+  .gir-table tbody td:nth-child(1) {
+    font-weight: 800;
+    color: #304969;
+  }
+
+  /* Réactif */
+  @media (max-width: 820px) {
+    .gir-table thead {
+      display: none;
+    }
+    .gir-table,
+    .gir-table tbody,
+    .gir-table tr,
+    .gir-table td {
+      display: block;
+      width: 100%;
+    }
+    .gir-table tr {
+      border-bottom: 1px solid #dfe8ff;
+    }
+    .gir-table tbody td {
+      text-align: left;
+      border-right: none;
+      position: relative;
+      padding: 12px 14px 12px 120px;
+    }
+    .gir-table tbody td:nth-child(1) {
+      padding: 12px 14px;
+      border-bottom: none;
+      border-top: 1px solid #dfe8ff;
+      border-radius: 12px 12px 0 0;
+    }
+    .gir-table tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      font-weight: 700;
+      color: #5a6a86;
+    }
+    .gir-table tbody tr:last-child td:last-child {
+      border-radius: 0 0 12px 12px;
+    }
+  }
+</style>
