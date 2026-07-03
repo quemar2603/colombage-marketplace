@@ -62,6 +62,16 @@
       "category": "productivity"
     },
     {
+      "name": "linkedin-skills",
+      "source": "./plugins/linkedin-skills",
+      "description": "10 skills de marketing LinkedIn : rédaction de posts (hooks 2026), commentaires, réponses, humanizer, extracteur de hooks, planificateur de contenu, optimiseur de profil, advocacy équipe, suivi de threads et analytics d'engagés. Lecture via Apify et publication via Publora en option. Plugin tiers MIT par Serge Bulaev.",
+      "author": {
+        "name": "Serge Bulaev",
+        "url": "https://github.com/sergebulaev"
+      },
+      "category": "marketing"
+    },
+    {
       "name": "colombage-webflow",
       "source": "./plugins/colombage-webflow",
       "description": "Création et modification d'articles dans le CMS Webflow ColombAge (sites principal + Compagnie SAP) : mise en forme, règles SEO + style, snippets HTML, liens, et push en draft via API ou MCP Webflow.",
