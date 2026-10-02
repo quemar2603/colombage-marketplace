@@ -25,7 +25,7 @@ gentle**, built on a trustworthy navy with tender pink and periwinkle accents.
 - `assets/` — `logo-mark-navy.svg` (navy mark for light backgrounds),
   `logo-mark.svg` (periwinkle mark for navy/dark backgrounds).
 - **Photo library** — lives in the shared Drive (team access):
-  `G:\My Drive\Colombage\Developpement\02 Marketing\Photothèque\`
+  `G:\Mon Drive\Colombage\Developpement\02 Marketing\Photothèque\`
   (~68 images, use instead of `<image-slot>` placeholders). Naming prefixes:
   - `senior-*` — authentic brand shoots: seniors at home with companions
     (café, cuisine, bibliothèque, salle à manger). **Prefer these.**
